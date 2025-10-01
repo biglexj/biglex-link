@@ -7,6 +7,9 @@
 	"name": "biglexlink",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-10-01",
+	"routes": [
+		{"pattern": "link.biglexj.com/*", "zone_name": "biglexj.com"}
+	],
 	"observability": {
 		"enabled": true
 	}
