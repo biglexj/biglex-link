@@ -33,7 +33,18 @@ const links: Links = {
   // Proyectos
   'mikuandina': 'https://youtube.com/@miku-andina',
   'games': 'https://youtube.com/@biglexgames',
-  'store': 'https://youtube.com/@biglexstore'
+  'store': 'https://youtube.com/@biglexstore',
+
+  // Telegram
+  'tmepersonal': 'https://t.me/biglexrv',
+  'tmegrupo': 'https://t.me/biglexj',
+  'tmedev': 'https://t.me/biglexdev',
+  'tmeprovip': 'https://t.me/+IGFap6rlgp85Y2Rh',
+  'tmopro': 'https://t.me/biglexjpro',
+  'tmecanal': 'https://t.me/biglexpe',
+
+  // WhatsApp
+  'whatsapp': 'https://wa.me/message/YV7YWT342AQXI1?src=qr'
 }
 
 export default {
