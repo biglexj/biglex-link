@@ -1,4 +1,4 @@
-# biglexjlink
+# biglex-link
 
 Este proyecto es un acortador de enlaces simple que se ejecuta en Cloudflare Workers. Redirige a los usuarios desde una URL corta a una URL de destino más larga.
 
