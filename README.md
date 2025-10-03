@@ -64,7 +64,7 @@ Aquí hay una lista de los enlaces cortos actualmente configurados:
     -   `/miku`
     -   `/amor`
 
-## 部署 (Deployment)
+## 🚀 (Deployment)
 
 Para desplegar este worker a Cloudflare, ejecuta el siguiente comando:
 
