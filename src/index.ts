@@ -29,6 +29,7 @@ const links: Links = {
   'ely': 'https://youtube.com/@ely_vtuber',
   'dev': 'https://youtube.com/@biglexdev',
   'live': 'https://youtube.com/@biglexlive',
+  'tema': 'https://youtube.com/@biglexjtema',
   
   // Proyectos
   'mikuandina': 'https://youtube.com/@miku-andina',
