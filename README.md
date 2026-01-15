@@ -47,12 +47,16 @@ Aquí hay una lista de los enlaces cortos actualmente configurados:
     -   `/ely`
     -   `/dev`
     -   `/live`
+    -   `/tema`
+    **Patreon:**
+    -   `/patreon`
+    -   `/patreon-k`
 -   **Proyectos:**
     -   `/mikuandina`
     -   `/games`
     -   `/store`
 -   **Telegram:**
-    -   `/tmepersonal`
+    -   `/telegram`
     -   `/tmegrupo`
     -   `/tmedev`
     -   `/tmeprovip`

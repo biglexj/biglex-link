@@ -9,10 +9,10 @@ const links: Links = {
   // YouTube Videos
   'miku': 'https://youtube.com/watch?v=NOE8h8Lxn8c',
   'amor': 'https://youtube.com/watch?v=IUZlRGTBcPo&t=25s',
-  
+
   // Discord
   'discord': 'https://discord.gg/f5crHcpHKW',
-  
+
   // Redes sociales
   'youtube': 'https://youtube.com/@biglexj',
   'github': 'https://github.com/biglexj',
@@ -23,21 +23,25 @@ const links: Links = {
   'tiktok': 'https://tiktok.com/@biglexj',
   'twitter': 'https://twitter.com/biglexj',
   'instagram': 'https://instagram.com/biglexj',
-  
+
+  //Patreon
+  'patreon': 'https://patreon.com/biglexj',
+  'patreon-k': 'https://patreon.com/biglexpe',
+
   // Canales específicos
   'biglex': 'https://youtube.com/@biglexj',
   'ely': 'https://youtube.com/@ely_vtuber',
   'dev': 'https://youtube.com/@biglexdev',
   'live': 'https://youtube.com/@biglexlive',
   'tema': 'https://youtube.com/@biglexjtema',
-  
+
   // Proyectos
   'mikuandina': 'https://youtube.com/@miku-andina',
   'games': 'https://youtube.com/@biglexgames',
   'store': 'https://youtube.com/@biglexstore',
 
   // Telegram
-  'tmepersonal': 'https://t.me/biglexrv',
+  'telegram': 'https://t.me/biglexrv',
   'tmegrupo': 'https://t.me/biglexj',
   'tmedev': 'https://t.me/biglexdev',
   'tmeprovip': 'https://t.me/+IGFap6rlgp85Y2Rh',
@@ -52,17 +56,17 @@ export default {
   async fetch(request: Request): Promise<Response> {
     const url = new URL(request.url)
     const path = url.pathname.slice(1)
-    
+
     if (!path) {
       return Response.redirect('https://biglexj.com', 301)
     }
-    
+
     const destination = links[path.toLowerCase()]
-    
+
     if (destination) {
       return Response.redirect(destination, 301)
     }
-    
+
     return new Response(`
       <!DOCTYPE html>
       <html>
