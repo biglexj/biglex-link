@@ -39,6 +39,10 @@ const links: Links = {
   'mikuandina': 'https://youtube.com/@miku-andina',
   'games': 'https://youtube.com/@biglexgames',
   'store': 'https://youtube.com/@biglexstore',
+  'producciones': 'https://youtube.com/@biglexpe',
+
+  // Proyectos GitHub
+  'historia': 'https://github.com/biglexj/miHistoria',
 
   // Telegram
   'telegram': 'https://t.me/biglexrv',
