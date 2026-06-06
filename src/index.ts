@@ -53,7 +53,7 @@ const links: Links = {
   'tmecanal': 'https://t.me/biglexpe',
 
   // WhatsApp
-  'whatsapp': 'https://wa.me/message/YV7YWT342AQXI1?src=qr'
+  'whatsapp': 'https://wa.me/51941768509?text=Hola,%20estoy%20interesado%20en%20sus%20servicios.'
 }
 
 export default {

@@ -68,15 +68,32 @@ Aquí hay una lista de los enlaces cortos actualmente configurados:
     -   `/miku`
     -   `/amor`
 
-## 🚀 (Deployment)
+## 🚀 Despliegue (Deployment)
 
-Para desplegar este worker a Cloudflare, ejecuta el siguiente comando:
+Para desplegar este worker a Cloudflare, sigue estos pasos:
 
-```bash
-npm run deploy
-```
+1. **Inicia sesión en Cloudflare:**
+   Si no has iniciado sesión o tu sesión ha expirado, ejecuta el siguiente comando para autenticarte:
+   ```bash
+   npx wrangler login
+   ```
+   *Nota para Windows (si tienes la ejecución de scripts de PowerShell deshabilitada):* Puedes ejecutar `npx.cmd wrangler login` en su lugar. Esto abrirá una pestaña en tu navegador para autorizar la conexión. Si no se abre automáticamente, copia y pega en tu navegador el enlace que se muestra en la consola.
 
-Esto publicará el worker en tu cuenta de Cloudflare.
+   *Método alternativo (Token de API):* Si prefieres no usar el login interactivo (útil para integración continua/CI), puedes crear un Token de API en el panel de Cloudflare con la plantilla **Edit Cloudflare Workers** y configurarlo como una variable de entorno:
+   ```bash
+   # En Windows PowerShell:
+   $env:CLOUDFLARE_API_TOKEN="tu_token_de_api"
+   
+   # En CMD:
+   set CLOUDFLARE_API_TOKEN=tu_token_de_api
+   ```
+
+2. **Ejecuta el despliegue:**
+   ```bash
+   npm run deploy
+   ```
+
+   Esto publicará el worker en tu cuenta de Cloudflare.
 
 ## ✅ Pruebas (Testing)
 
