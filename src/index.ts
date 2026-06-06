@@ -120,7 +120,7 @@ export default {
 
             body {
               font-family: 'Poppins', sans-serif;
-              background-image: linear-gradient(rgba(5, 10, 20, 0.82), rgba(15, 23, 42, 0.82)), url('https://raw.githubusercontent.com/biglexj/biglex-link/refs/heads/main/bg-404.png');
+              background-image: url('https://raw.githubusercontent.com/biglexj/biglex-link/refs/heads/main/bg-404.png');
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat;
@@ -133,41 +133,13 @@ export default {
               position: relative;
             }
 
-            /* Decoración de mancha (Glow) centrada según regla del sistema */
-            .glow-blob {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 380px;
-              height: 380px;
-              background: var(--accent-blue);
-              opacity: 0.08; /* Regla de opacidad a 8% */
-              filter: blur(120px); /* Regla de desenfoque */
-              border-radius: 50%;
-              pointer-events: none;
-              z-index: 0;
-              animation: pulseGlow 4s ease-in-out infinite alternate;
-            }
-
-            @keyframes pulseGlow {
-              0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.06; }
-              100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.09; }
-            }
-
             .container {
               position: relative;
               z-index: 10;
               width: 90%;
               max-width: 460px;
-              padding: 3rem 2.5rem;
-              background-color: rgba(30, 41, 59, 0.65); /* bg-surface-app/65 */
-              border: 1px solid rgba(248, 250, 252, 0.08); /* border-text-main/8 */
-              backdrop-filter: blur(20px);
-              -webkit-backdrop-filter: blur(20px);
-              border-radius: 24px; /* rounded-3xl para tarjetas */
+              padding: 2rem 1rem;
               text-align: center;
-              box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
               animation: cardAppear 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             }
 
@@ -188,17 +160,6 @@ export default {
               justify-content: center;
               align-items: center;
               position: relative;
-            }
-
-            .icon-glow {
-              position: absolute;
-              width: 80px;
-              height: 80px;
-              background: var(--accent-blue);
-              filter: blur(20px);
-              opacity: 0.25;
-              border-radius: 50%;
-              z-index: -1;
             }
 
             .error-svg {
@@ -227,8 +188,8 @@ export default {
 
             .link-path {
               font-family: monospace;
-              background-color: rgba(15, 23, 42, 0.5); /* bg-app/50 */
-              border: 1px solid rgba(248, 250, 252, 0.12);
+              background-color: rgba(0, 0, 0, 0.35); /* Fondo oscuro sutil */
+              border: 1px solid rgba(248, 250, 252, 0.15);
               padding: 3px 8px;
               border-radius: 8px;
               color: var(--text-main);
@@ -284,11 +245,8 @@ export default {
           </style>
         </head>
         <body>
-          <div class="glow-blob"></div>
-          
           <div class="container">
             <div class="icon-container">
-              <div class="icon-glow"></div>
               <svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <!-- Enlaces en Accent Blue -->
                 <path d="M9 17H7A5 5 0 0 1 7 7h2" stroke="var(--accent-blue)" />
@@ -309,7 +267,7 @@ export default {
             </a>
             
             <div class="footer-brand">
-              <span>© 2026 Biglex</span>
+              <span>© 2026 biglexj</span>
             </div>
           </div>
         </body>
