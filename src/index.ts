@@ -96,17 +96,20 @@ export default {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
           <style>
             :root {
-              --bg-start: #0a0b10;
-              --bg-end: #141520;
-              --primary: #6366f1;
-              --primary-glow: rgba(99, 102, 241, 0.15);
-              --text-main: #f3f4f6;
-              --text-muted: #9ca3af;
-              --card-bg: rgba(255, 255, 255, 0.03);
-              --card-border: rgba(255, 255, 255, 0.07);
+              --bg-dark: #050a14;
+              --bg-app: #0f172a;
+              --surface-app: #1e293b;
+              --text-main: #f8fafc;
+              --text-contrast: #94a3b8;
+              
+              /* Accents */
+              --accent-blue: #00aaff;
+              --accent-blue-hover: #2cbdff;
+              --accent-coral: #ff5b4c;
+              --accent-coral-glow: rgba(255, 91, 76, 0.25);
             }
 
             * {
@@ -116,10 +119,11 @@ export default {
             }
 
             body {
-              font-family: 'Outfit', sans-serif;
-              background-image: linear-gradient(rgba(10, 11, 16, 0.85), rgba(20, 21, 32, 0.85)), url('https://raw.githubusercontent.com/biglexj/biglex-link/refs/heads/main/bg-404.png');
+              font-family: 'Poppins', sans-serif;
+              background-image: linear-gradient(rgba(5, 10, 20, 0.82), rgba(15, 23, 42, 0.82)), url('https://raw.githubusercontent.com/biglexj/biglex-link/refs/heads/main/bg-404.png');
               background-size: cover;
               background-position: center;
+              background-repeat: no-repeat;
               min-height: 100vh;
               display: flex;
               justify-content: center;
@@ -129,55 +133,48 @@ export default {
               position: relative;
             }
 
-            /* Glowing background blobs */
+            /* Decoración de mancha (Glow) centrada según regla del sistema */
             .glow-blob {
               position: absolute;
-              width: 350px;
-              height: 350px;
-              background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-              opacity: 0.15;
-              filter: blur(50px);
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 380px;
+              height: 380px;
+              background: var(--accent-blue);
+              opacity: 0.08; /* Regla de opacidad a 8% */
+              filter: blur(120px); /* Regla de desenfoque */
+              border-radius: 50%;
               pointer-events: none;
               z-index: 0;
-              animation: float 12s ease-in-out infinite alternate;
+              animation: pulseGlow 4s ease-in-out infinite alternate;
             }
 
-            .glow-blob-1 {
-              top: 10%;
-              left: 15%;
-            }
-
-            .glow-blob-2 {
-              bottom: 15%;
-              right: 15%;
-              animation-delay: -6s;
-            }
-
-            @keyframes float {
-              0% { transform: translate(0, 0) scale(1); }
-              100% { transform: translate(30px, 20px) scale(1.1); }
+            @keyframes pulseGlow {
+              0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.06; }
+              100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.09; }
             }
 
             .container {
               position: relative;
               z-index: 10;
               width: 90%;
-              max-width: 480px;
+              max-width: 460px;
               padding: 3rem 2.5rem;
-              background: var(--card-bg);
-              border: 1px solid var(--card-border);
+              background-color: rgba(30, 41, 59, 0.65); /* bg-surface-app/65 */
+              border: 1px solid rgba(248, 250, 252, 0.08); /* border-text-main/8 */
               backdrop-filter: blur(20px);
               -webkit-backdrop-filter: blur(20px);
-              border-radius: 28px;
+              border-radius: 24px; /* rounded-3xl para tarjetas */
               text-align: center;
-              box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-              animation: cardAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+              box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+              animation: cardAppear 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             }
 
             @keyframes cardAppear {
               from {
                 opacity: 0;
-                transform: translateY(20px) scale(0.98);
+                transform: translateY(15px) scale(0.98);
               }
               to {
                 opacity: 1;
@@ -186,7 +183,7 @@ export default {
             }
 
             .icon-container {
-              margin-bottom: 2rem;
+              margin-bottom: 1.8rem;
               display: inline-flex;
               justify-content: center;
               align-items: center;
@@ -195,56 +192,46 @@ export default {
 
             .icon-glow {
               position: absolute;
-              width: 90px;
-              height: 90px;
-              background: var(--primary);
-              filter: blur(25px);
-              opacity: 0.4;
+              width: 80px;
+              height: 80px;
+              background: var(--accent-blue);
+              filter: blur(20px);
+              opacity: 0.25;
               border-radius: 50%;
               z-index: -1;
-              animation: pulseGlow 3s infinite alternate;
-            }
-
-            @keyframes pulseGlow {
-              0% { transform: scale(0.9); opacity: 0.3; }
-              100% { transform: scale(1.1); opacity: 0.5; }
             }
 
             .error-svg {
-              width: 80px;
-              height: 80px;
-              fill: none;
-              stroke: var(--primary);
-              stroke-width: 2;
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+              width: 76px;
+              height: 76px;
+              filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.35));
             }
 
             h1 {
-              font-size: 2.2rem;
-              font-weight: 700;
-              margin-bottom: 1rem;
-              background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              letter-spacing: -0.5px;
+              font-family: 'Oswald', sans-serif;
+              font-weight: 900;
+              font-size: 2.1rem;
+              text-transform: uppercase;
+              letter-spacing: 0.05em;
+              margin-bottom: 0.8rem;
+              color: var(--text-main);
             }
 
             p {
-              font-size: 1.05rem;
-              color: var(--text-muted);
+              font-family: 'Poppins', sans-serif;
+              font-size: 0.95rem;
+              color: var(--text-contrast);
               line-height: 1.6;
               margin-bottom: 2rem;
             }
 
             .link-path {
               font-family: monospace;
-              background: rgba(255, 255, 255, 0.08);
-              border: 1px solid rgba(255, 255, 255, 0.1);
+              background-color: rgba(15, 23, 42, 0.5); /* bg-app/50 */
+              border: 1px solid rgba(248, 250, 252, 0.12);
               padding: 3px 8px;
-              border-radius: 6px;
-              color: #e0e7ff;
+              border-radius: 8px;
+              color: var(--text-main);
               font-size: 0.95rem;
               word-break: break-all;
             }
@@ -254,21 +241,23 @@ export default {
               align-items: center;
               justify-content: center;
               gap: 0.5rem;
-              background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-              color: white;
+              background: var(--accent-blue);
+              color: #ffffff;
               text-decoration: none;
+              font-family: 'Poppins', sans-serif;
               font-weight: 600;
-              padding: 0.9rem 2rem;
-              border-radius: 14px;
+              font-size: 0.95rem;
+              padding: 0.8rem 1.8rem;
+              border-radius: 12px; /* rounded-xl para botones */
               transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-              box-shadow: 0 4px 15px var(--primary-glow);
+              box-shadow: 0 4px 15px rgba(0, 170, 255, 0.25);
               border: 1px solid rgba(255, 255, 255, 0.1);
             }
 
             .btn-primary:hover {
               transform: translateY(-2px);
-              box-shadow: 0 8px 25px rgba(99, 102, 241, 0.35);
-              background: linear-gradient(135deg, #6d70f2 0%, #5a52e6 100%);
+              box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
+              background: var(--accent-blue-hover);
             }
 
             .btn-primary:active {
@@ -284,9 +273,9 @@ export default {
             }
 
             .footer-brand {
-              margin-top: 2.5rem;
-              font-size: 0.85rem;
-              color: rgba(255, 255, 255, 0.3);
+              margin-top: 2.2rem;
+              font-size: 0.8rem;
+              color: rgba(248, 250, 252, 0.25);
               display: flex;
               align-items: center;
               justify-content: center;
@@ -295,16 +284,18 @@ export default {
           </style>
         </head>
         <body>
-          <div class="glow-blob glow-blob-1"></div>
-          <div class="glow-blob glow-blob-2"></div>
+          <div class="glow-blob"></div>
           
           <div class="container">
             <div class="icon-container">
               <div class="icon-glow"></div>
-              <svg class="error-svg" viewBox="0 0 24 24">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                <line x1="8" y1="16" x2="16" y2="8" stroke="rgba(239, 68, 68, 0.8)" stroke-width="2" />
+              <svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Enlaces en Accent Blue -->
+                <path d="M9 17H7A5 5 0 0 1 7 7h2" stroke="var(--accent-blue)" />
+                <path d="M15 7h2a5 5 0 0 1 0 10h-2" stroke="var(--accent-blue)" />
+                <line x1="8" y1="12" x2="16" y2="12" stroke="var(--accent-blue)" stroke-dasharray="3 3" />
+                <!-- Slash de corte en Accent Coral -->
+                <line x1="5" y1="19" x2="19" y2="5" stroke="var(--accent-coral)" stroke-width="2.5" />
               </svg>
             </div>
             <h1>Enlace no encontrado</h1>
