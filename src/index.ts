@@ -62,13 +62,13 @@ export default {
     const path = url.pathname.slice(1)
 
     if (!path) {
-      return Response.redirect('https://biglexj.com', 301)
+      return Response.redirect('https://biglexj.com', 302)
     }
 
     const destination = links[path.toLowerCase()]
 
     if (destination) {
-      return Response.redirect(destination, 301)
+      return Response.redirect(destination, 302)
     }
 
     return new Response(`

@@ -29,6 +29,10 @@ Para ejecutar este proyecto localmente, necesitarás tener [Node.js](https://nod
 
 ## 🔗 Enlaces Disponibles
 
+Para acceder o compartir cualquiera de los enlaces configurados, debes anteponer el dominio de redirección al enlace corto. 
+
+La estructura del enlace es: **`https://link.biglexj.com/[enlace]`** (por ejemplo, [https://link.biglexj.com/discord](https://link.biglexj.com/discord)).
+
 Aquí hay una lista de los enlaces cortos actualmente configurados:
 
 -   **Redes Sociales:**
