@@ -102,14 +102,13 @@ export default {
               --bg-dark: #050a14;
               --bg-app: #0f172a;
               --surface-app: #1e293b;
-              --text-main: #f8fafc;
-              --text-contrast: #94a3b8;
+              --text-main: #ffffff;
+              --text-contrast: #e2e8f0;
               
               /* Accents */
-              --accent-blue: #00aaff;
-              --accent-blue-hover: #2cbdff;
+              --accent-green: #00c7b1;
+              --accent-green-hover: #19e8ce;
               --accent-coral: #ff5b4c;
-              --accent-coral-glow: rgba(255, 91, 76, 0.25);
             }
 
             * {
@@ -165,7 +164,7 @@ export default {
             .error-svg {
               width: 76px;
               height: 76px;
-              filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.35));
+              filter: drop-shadow(0 0 10px rgba(0, 199, 177, 0.45));
             }
 
             h1 {
@@ -188,11 +187,11 @@ export default {
 
             .link-path {
               font-family: monospace;
-              background-color: rgba(0, 0, 0, 0.35); /* Fondo oscuro sutil */
-              border: 1px solid rgba(248, 250, 252, 0.15);
+              background-color: rgba(0, 0, 0, 0.45); /* Fondo oscuro sutil */
+              border: 1px solid rgba(0, 199, 177, 0.3); /* Borde verde sutil */
               padding: 3px 8px;
               border-radius: 8px;
-              color: var(--text-main);
+              color: var(--accent-green); /* Destacado en el verde de Eli */
               font-size: 0.95rem;
               word-break: break-all;
             }
@@ -202,23 +201,23 @@ export default {
               align-items: center;
               justify-content: center;
               gap: 0.5rem;
-              background: var(--accent-blue);
-              color: #ffffff;
+              background: var(--accent-green);
+              color: #0b2521; /* Texto oscuro para alto contraste sobre verde */
               text-decoration: none;
               font-family: 'Poppins', sans-serif;
-              font-weight: 600;
+              font-weight: 700;
               font-size: 0.95rem;
               padding: 0.8rem 1.8rem;
               border-radius: 12px; /* rounded-xl para botones */
               transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-              box-shadow: 0 4px 15px rgba(0, 170, 255, 0.25);
+              box-shadow: 0 4px 15px rgba(0, 199, 177, 0.25);
               border: 1px solid rgba(255, 255, 255, 0.1);
             }
 
             .btn-primary:hover {
               transform: translateY(-2px);
-              box-shadow: 0 8px 20px rgba(0, 170, 255, 0.4);
-              background: var(--accent-blue-hover);
+              box-shadow: 0 8px 20px rgba(0, 199, 177, 0.4);
+              background: var(--accent-green-hover);
             }
 
             .btn-primary:active {
@@ -236,7 +235,7 @@ export default {
             .footer-brand {
               margin-top: 2.2rem;
               font-size: 0.8rem;
-              color: rgba(248, 250, 252, 0.25);
+              color: rgba(248, 250, 252, 0.4); /* Mayor visibilidad para el footer */
               display: flex;
               align-items: center;
               justify-content: center;
