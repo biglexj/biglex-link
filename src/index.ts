@@ -245,18 +245,8 @@ export default {
         </head>
         <body>
           <div class="container">
-            <div class="icon-container">
-              <svg class="error-svg" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Enlaces en Accent Blue -->
-                <path d="M9 17H7A5 5 0 0 1 7 7h2" stroke="var(--accent-blue)" />
-                <path d="M15 7h2a5 5 0 0 1 0 10h-2" stroke="var(--accent-blue)" />
-                <line x1="8" y1="12" x2="16" y2="12" stroke="var(--accent-blue)" stroke-dasharray="3 3" />
-                <!-- Slash de corte en Accent Coral -->
-                <line x1="5" y1="19" x2="19" y2="5" stroke="var(--accent-coral)" stroke-width="2.5" />
-              </svg>
-            </div>
-            <h1>Enlace no encontrado</h1>
-            <p>El enlace <span class="link-path">/${escapedPath}</span> no está disponible o no existe.</p>
+            <h1>Ups... creo que algo no coincide</h1>
+            <p>No encontré ninguna ruta asociada a <span class="link-path">/${escapedPath}</span></p>
             <a href="https://biglexj.com" class="btn-primary">
               Volver al inicio
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
