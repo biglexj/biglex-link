@@ -13,6 +13,10 @@ const links: Links = {
   // Discord
   'discord': 'https://discord.gg/f5crHcpHKW',
 
+  // Steam
+  'steam': 'https://steamcommunity.com/id/biglexj',
+  'xbox': 'https://www.xbox.com/es-ES/play/user/BiglexJ9568',
+
   // Redes sociales
   'youtube': 'https://youtube.com/@biglexj',
   'github': 'https://github.com/biglexj',
@@ -24,9 +28,11 @@ const links: Links = {
   'twitter': 'https://twitter.com/biglexj',
   'instagram': 'https://instagram.com/biglexj',
 
-  //Patreon
+  //Patrocinadores
   'patreon': 'https://patreon.com/biglexj',
   'patreon-k': 'https://patreon.com/biglexpe',
+  'kofi': 'https://ko-fi.com/biglexj',
+  'cofee': 'https://www.buymeacoffee.com/biglexj',
 
   // Canales específicos
   'biglex': 'https://youtube.com/@biglexj',
