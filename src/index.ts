@@ -6,61 +6,13 @@ type Links = {
 }
 
 const links: Links = {
-  // YouTube Videos
-  'miku': 'https://youtube.com/watch?v=NOE8h8Lxn8c',
-  'amor': 'https://youtube.com/watch?v=IUZlRGTBcPo&t=25s',
-
-  // Discord
+  // Ejemplos de redirecciones (públicos y de prueba)
   'discord': 'https://discord.gg/f5crHcpHKW',
-
-  // Steam
-  'steam': 'https://steamcommunity.com/id/biglexj',
-  'xbox': 'https://www.xbox.com/es-ES/play/user/BiglexJ9568',
-
-  // Redes sociales
   'youtube': 'https://youtube.com/@biglexj',
   'github': 'https://github.com/biglexj',
-  'twitch': 'https://twitch.tv/biglex_j',
-  'reddit': 'https://reddit.com/u/biglexj',
-  'linkedin': 'https://www.linkedin.com/in/biglexj',
-  'facebook': 'https://facebook.com/biglexj',
-  'tiktok': 'https://tiktok.com/@biglexj',
-  'twitter': 'https://twitter.com/biglexj',
-  'instagram': 'https://instagram.com/biglexj',
-
-  //Patrocinadores
-  'patreon': 'https://patreon.com/biglexj',
-  'patreon-k': 'https://patreon.com/biglexpe',
+  'steam': 'https://steamcommunity.com/id/biglexj',
   'kofi': 'https://ko-fi.com/biglexj',
-  'cofee': 'https://www.buymeacoffee.com/biglexj',
-
-  // Canales específicos
-  'biglex': 'https://youtube.com/@biglexj',
-  'ely': 'https://youtube.com/@ely_vtuber',
-  'dev': 'https://youtube.com/@biglexdev',
-  'live': 'https://youtube.com/@biglexlive',
-  'tema': 'https://youtube.com/@biglexjtema',
-
-  // Proyectos
-  'mikuandina': 'https://youtube.com/@miku-andina',
-  'games': 'https://youtube.com/@biglexgames',
-  'store': 'https://youtube.com/@biglexstore',
-  'producciones': 'https://youtube.com/@biglexpe',
-
-  // Proyectos GitHub
-  'historia': 'https://github.com/biglexj/miHistoria',
-
-  // Telegram
-  'telegram': 'https://t.me/biglexrv',
-  'tmegrupo': 'https://t.me/biglexj',
-  'tmedev': 'https://t.me/biglexdev',
-  'tmeprovip': 'https://t.me/+IGFap6rlgp85Y2Rh',
-  'tmopro': 'https://t.me/biglexjpro',
-  'tmecanal': 'https://t.me/biglexpe',
-
-  // WhatsApp
-  'whatsapp': 'https://wa.me/51941768509?text=Hola,%20estoy%20interesado%20en%20sus%20servicios.',
-  'wspgrupo': 'https://chat.whatsapp.com/LpnBc9QTYplLy8QIfh18I4'
+  'miku': 'https://youtube.com/watch?v=NOE8h8Lxn8c'
 }
 
 function escapeHtml(str: string): string {
